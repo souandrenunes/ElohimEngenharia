@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Masterizado para Localidade (RJ) e Serviços -->
+    <title>Elohim Engenharia | Reforma de Fachada e Manutenção Predial no RJ</title>
+    <meta name="description" content="Especialistas em reforma de fachadas, laudos técnicos de engenharia civil e manutenção predial no Rio de Janeiro, Niterói e São Gonçalo. 20 anos de tradição.">
+    <meta name="keywords" content="Reforma de fachada RJ, manutenção predial Rio de Janeiro, laudo técnico engenharia, engenharia civil São Gonçalo, empresa reforma de condomínio Niterói, revitalização de fachada, laudo de vistoria predial">
+    
+    <!-- Tipografia e Ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Biblioteca de Animação de Scroll (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --azul-escuro: #111827;
+            --azul-marinho: #1a365d;
+            --laranja-terracota: #c05621;
+            --laranja-hover: #9c4221;
+            --cinza-texto: #9ca3af;
+            --branco: #ffffff;
+            --fundo-claro: #f9fafb;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { background-color: var(--fundo-claro); color: #374151; line-height: 1.6; overflow-x: hidden; }
+
+        /* Top Bar de Contato */
+        .top-bar {
+            background-color: var(--azul-escuro);
+            color: var(--cinza-texto);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: flex-end;
+            gap: 30px;
+            font-size: 13px;
+        }
+        .top-bar i { color: var(--laranja-terracota); margin-right: 8px; font-size: 16px; }
+
+        /* Navegação Principal Ajustada (Logo Maior) */
+        .navbar {
+            background-color: var(--azul-marinho);
+            padding: 0 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 110px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo-container {
+            background-color: var(--branco);
+            height: 100%;
+            padding: 10px 30px; 
+            display: flex;
+            align-items: center;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+            min-width: 320px; 
+        }
+        .logo-container img { height: 85px; width: auto; }
+        
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { color: var(--branco); text-decoration: none; font-weight: 600; font-size: 14px; text-transform: uppercase; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--laranja-terracota); }
+
+        .btn-orcamento {
+            background-color: var(--laranja-terracota);
+            color: var(--branco);
+            padding: 12px 28px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: 0.3s;
+            border: 2px solid var(--laranja-terracota);
+        }
+        .btn-orcamento:hover { background-color: transparent; color: var(--laranja-terracota); }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(90deg, rgba(17,24,39,0.95) 0%, rgba(26,54,93,0.85) 50%, rgba(255,255,255,0) 100%), 
+                        url('https://images.unsplash.com/photo-1541888086425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center right/cover no-repeat;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+        }
+        .hero-content { max-width: 700px; color: var(--branco); }
+        .hero-content h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 20px; text-transform: uppercase; }
+        .hero-content p { font-size: 1.15rem; color: #d1d5db; margin-bottom: 40px; font-weight: 400; line-height: 1.8; }
+        .hero-content strong { color: var(--laranja-terracota); }
+        
+        .btn-primary {
+            background-color: var(--laranja-terracota);
+            color: var(--branco);
+            padding: 18px 40px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 15px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: 0.3s;
+            display: inline-block;
+            box-shadow: 0 10px 20px rgba(192, 86, 33, 0.3);
+        }
+        .btn-primary:hover { background-color: var(--laranja-hover); transform: translateY(-3px); }
+
+        /* Faixa de Destaque */
+        .highlight-strip {
+            background-color: var(--laranja-terracota);
+            padding: 40px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--branco);
+        }
+        .highlight-strip h2 { font-size: 2rem; font-weight: 800; }
+        .btn-dark { background-color: var(--azul-escuro); color: var(--branco); padding: 14px 35px; text-decoration: none; font-weight: 700; border-radius: 4px; transition: 0.3s; text-transform: uppercase;}
+        .btn-dark:hover { background-color: #000; transform: translateY(-2px); }
+
+        /* Copy: A Dor do Síndico & Método VPI */
+        .strategy-section { padding: 100px 5%; background-color: var(--branco); }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 2.5rem; color: var(--azul-marinho); font-weight: 800; margin-bottom: 20px; }
+        .section-header p { font-size: 1.1rem; color: #4b5563; max-width: 800px; margin: 0 auto; }
+
+        .method-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .method-card {
+            background: var(--fundo-claro);
+            padding: 40px 30px;
+            border-bottom: 4px solid var(--laranja-terracota);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .method-card:hover { transform: translateY(-10px); }
+        .method-card i { font-size: 45px; color: var(--azul-marinho); margin-bottom: 20px; }
+        .method-card h3 { font-size: 1.3rem; color: var(--azul-marinho); margin-bottom: 15px; font-weight: 700; }
+
+        /* Autoridade 20 Anos */
+        .about-section { padding: 100px 5%; display: flex; gap: 60px; max-width: 1400px; margin: 0 auto; align-items: center; }
+        .about-text { flex: 1; background: var(--branco); padding: 50px; box-shadow: -15px 15px 0px var(--laranja-terracota); border: 1px solid #e5e7eb; }
+        .about-text h2 { font-size: 2.2rem; color: var(--azul-marinho); margin-bottom: 20px; font-weight: 800; line-height: 1.2; }
+        .about-text p { margin-bottom: 20px; color: #4b5563; font-size: 1.05rem; }
+
+        .features-grid { flex: 1.2; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .feature-item i { font-size: 40px; color: var(--laranja-terracota); margin-bottom: 15px; }
+        .feature-item h3 { font-size: 1.2rem; color: var(--azul-marinho); margin-bottom: 10px; font-weight: 700; }
+        .feature-item p { font-size: 0.95rem; color: #6b7280; }
+
+        /* Footer Masterizado */
+        .footer { background-color: var(--azul-escuro); color: #d1d5db; padding: 80px 5% 30px; border-top: 5px solid var(--laranja-terracota); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1400px; margin: 0 auto; border-bottom: 1px solid #374151; padding-bottom: 40px; margin-bottom: 30px; }
+        .footer-logo img { height: 70px; margin-bottom: 20px; filter: brightness(0) invert(1); } 
+        .footer-logo p { font-size: 0.95rem; line-height: 1.7; }
+        
+        .footer-title { color: var(--branco); font-size: 1.2rem; font-weight: 700; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-links list-style { padding: 0; }
+        .footer-links li { list-style: none; margin-bottom: 12px; }
+        .footer-links a { color: #9ca3af; text-decoration: none; transition: 0.3s; }
+        .footer-links a:hover { color: var(--laranja-terracota); padding-left: 5px; }
+        
+        .footer-contact li { list-style: none; margin-bottom: 15px; display: flex; align-items: flex-start; gap: 15px; }
+        .footer-contact i { color: var(--laranja-terracota); font-size: 18px; margin-top: 3px; }
+        
+        .footer-bottom { text-align: center; font-size: 0.9rem; color: #6b7280; }
+
+        @media (max-width: 992px) {
+            .about-section { flex-direction: column; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .highlight-strip { flex-direction: column; text-align: center; gap: 20px; }
+            .nav-links { display: none; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .navbar { height: 90px; }
+            .logo-container { padding: 10px; min-width: 250px; }
+            .logo-container img { height: 60px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div><i class="fas fa-envelope"></i> contato@elohimengenharia.com.br</div>
+        <div><i class="fas fa-phone-alt"></i> (21) 98989-1806</div>
+    </div>
+
+    <nav class="navbar" data-aos="fade-down" data-aos-duration="800">
+        <div class="logo-container">
+            <img src="logo.1.jng_2.jpg" alt="Elohim Soluções em Engenharia">
+        </div>
+        <div class="nav-links">
+            <a href="#">Início</a>
+            <a href="#metodo">O Método V.P.I</a>
+            <a href="#sobre">Quem Somos</a>
+        </div>
+        <a href="https://wa.me/5521975236340?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20engenharia." class="btn-orcamento" target="_blank">Falar com Engenheiro</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-right" data-aos-duration="1200">
+            <h1>Engenharia de Alta Precisão e Blindagem Patrimonial no RJ</h1>
+            <p>Não vendemos apenas obras, garantimos a <strong>paz de espírito do síndico</strong> e a valorização imediata do condomínio. Revitalização de fachadas e engenharia civil com o rigor que a sua gestão exige e a segurança que os moradores merecem.</p>
+            <a href="https://wa.me/5521975236340?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20em%2024h%20para%20o%20meu%20condom%C3%ADnio." class="btn-primary" target="_blank">Agendar Diagnóstico em 24h</a>
+        </div>
+    </section>
+
+    <section class="highlight-strip" data-aos="fade-up">
+        <h2>Sua gestão não permite margem para o amadorismo.</h2>
+        <a href="https://wa.me/5521975236340" class="btn-dark" target="_blank">Solicite uma Vistoria Técnica</a>
+    </section>
+
+    <section id="metodo" class="strategy-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>O Método V.P.I. (Vistoria, Planejamento e Intervenção)</h2>
+                <p>Desenvolvemos um protocolo rigoroso em nossas duas décadas de mercado para eliminar o medo de processos, atrasos e dores de cabeça com empreiteiros não qualificados.</p>
+            </div>
+            
+            <div class="method-grid">
+                <div class="method-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-search-location"></i>
+                    <h3>1. Diagnóstico de Risco (Laudo)</h3>
+                    <p>Visita técnica rápida. Nosso engenheiro emite um laudo de vistoria detalhado, mapeando patologias ocultas antes que se tornem tragédias estruturais.</p>
+                </div>
+                <div class="method-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-hard-hat"></i>
+                    <h3>2. Engenharia de Retaguarda</h3>
+                    <p>Mão de obra 100% regularizada (EPIs, NR-35). Elaboramos um cronograma blindado anti-atraso e um plano de mitigação de impacto para os moradores.</p>
+                </div>
+                <div class="method-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-city"></i>
+                    <h3>3. Execução Patrimonial</h3>
+                    <p>Intervenção definitiva na fachada. Supervisão diária de engenharia civil garantindo que o seu prédio saia de um passivo de risco para um ativo hipervalorizado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="about-section">
+        <div class="about-text" data-aos="fade-right">
+            <h2>20 Anos de Tradição no Rio de Janeiro e Niterói</h2>
+            <p>Sabemos que gerenciar uma obra predial é um dos maiores desafios de um síndico. A pressão dos moradores, o medo de acidentes com pastilhas e reboco, e o fantasma do abandono de obra paralisam muitas gestões.</p>
+            <p><strong>Você não precisa gerenciar peões de obra.</strong> A Elohim assume a responsabilidade técnica, civil e operacional de ponta a ponta. Atuamos em São Gonçalo, Niterói e todo o Rio de Janeiro com excelência e solidez.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-item" data-aos="fade-left" data-aos-delay="100">
+                <i class="fas fa-building"></i>
+                <h3>Reforma de Fachadas</h3>
+                <p>Revitalização completa para prédios altos, eliminando infiltrações e riscos de desprendimento.</p>
+            </div>
+            <div class="feature-item" data-aos="fade-left" data-aos-delay="200">
+                <i class="fas fa-file-signature"></i>
+                <h3>Laudos Oficiais</h3>
+                <p>Engenheiros capacitados emitindo documentação técnica para embasar sua aprovação em assembleia.</p>
+            </div>
+            <div class="feature-item" data-aos="fade-left" data-aos-delay="300">
+                <i class="fas fa-tools"></i>
+                <h3>Manutenção Predial</h3>
+                <p>Prevenção e correção contínua, prolongando a vida útil da estrutura e instalações do condomínio.</p>
+            </div>
+            <div class="feature-item" data-aos="fade-left" data-aos-delay="400">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Segurança Jurídica</h3>
+                <p>Todas as ARTs e certificações em dia. Seu CPF blindado contra processos trabalhistas ou acidentes.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-logo" data-aos="fade-up">
+                <h2 style="color: white; margin-bottom: 15px;">ELOHIM <span style="color: var(--laranja-terracota);">ENGENHARIA</span></h2>
+                <p>Especialistas em revitalização de fachadas e blindagem patrimonial. 20 anos transformando projetos em segurança estrutural e tranquilidade para gestores e síndicos.</p>
+            </div>
+            
+            <div class="footer-links" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="footer-title">Links Úteis</h3>
+                <ul>
+                    <li><a href="#metodo">O Método V.P.I</a></li>
+                    <li><a href="#sobre">Quem Somos</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="footer-title">Atendimento Especializado</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>R. Afonso Quintão, 76 - Trindade<br>São Gonçalo - RJ, 24456-705</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>(21) 98989-1806</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>contato@elohimengenharia.com.br</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-hard-hat"></i>
+                        <span>Atendemos: RJ, Niterói e São Gonçalo</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Elohim Soluções em Engenharia. Todos os direitos reservados. Projeto executado com excelência.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
